@@ -55,7 +55,7 @@ npm run dev
 ## 🌐 Deploy
 
 O projeto está configurado para deploy automático. Você pode acessar a versão em produção em:
-[QuerVer](https://lovable.dev/projects/4238c5ff-00b7-4703-bfab-cc840eb20948)
+[QuerVer](https://check-theta-orcin.vercel.app/login)
 
 ## 🤝 Contribuindo
 
