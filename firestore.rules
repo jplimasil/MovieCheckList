@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Função helper para verificar se o usuário está autenticado
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Função helper para verificar se o usuário é membro de um grupo
+    function isMemberOfGroup(groupId) {
+      return exists(/databases/$(database)/documents/groups/$(groupId)/members/$(request.auth.uid));
+    }
+
+    // Função helper para verificar se o usuário é admin de um grupo
+    function isAdminOfGroup(groupId) {
+      return get(/databases/$(database)/documents/groups/$(groupId)/members/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Regras para usuários
+    match /users/{userId} {
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Regras para grupos
+    match /groups/{groupId} {
+      allow read: if isMemberOfGroup(groupId);
+      allow create: if isAuthenticated();
+      allow update: if isMemberOfGroup(groupId);
+      allow delete: if isAdminOfGroup(groupId);
+    }
+
+    // Regras para mídia
+    match /media/{mediaId} {
+      allow read: if isMemberOfGroup(resource.data.groupId);
+      allow create: if isMemberOfGroup(request.resource.data.groupId);
+      allow update: if isMemberOfGroup(resource.data.groupId);
+      allow delete: if isMemberOfGroup(resource.data.groupId);
+    }
+
+    // Regras para categorias
+    match /categories/{categoryId} {
+      allow read: if isMemberOfGroup(resource.data.groupId);
+      allow create: if isMemberOfGroup(request.resource.data.groupId);
+      allow update: if isMemberOfGroup(resource.data.groupId);
+      allow delete: if isMemberOfGroup(resource.data.groupId);
+    }
+  }
+} 
