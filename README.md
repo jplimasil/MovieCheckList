@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# QuerVer
 
-**URL**: https://lovable.dev/projects/4238c5ff-00b7-4703-bfab-cc840eb20948
+🎬 Seu catálogo pessoal de filmes, séries e livros
 
-## How can I edit this code?
+</div>
 
-There are several ways of editing your application.
+## 📖 Sobre o Projeto
 
-**Use Lovable**
+QuerVer é uma aplicação web moderna que permite aos usuários criar e gerenciar seu catálogo pessoal de mídia. Com uma interface intuitiva e elegante, os usuários podem organizar suas bibliotecas de filmes, séries e livros de forma eficiente e personalizada.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4238c5ff-00b7-4703-bfab-cc840eb20948) and start prompting.
+## ✨ Funcionalidades Principais
 
-Changes made via Lovable will be committed automatically to this repo.
+- 📚 **Bibliotecas Personalizadas**: Crie e gerencie múltiplas bibliotecas de mídia
+- 🎯 **Sistema de Categorização**: Organize seu conteúdo por categorias
+- 👥 **Compartilhamento**: Compartilhe suas bibliotecas através de códigos de convite
+- 🔄 **Troca Rápida**: Alterne facilmente entre diferentes bibliotecas
+- 💜 **Interface Temática**: Design elegante com tema romântico
+- 📱 **Responsivo**: Funciona perfeitamente em dispositivos móveis e desktop
 
-**Use your preferred IDE**
+## 🛠️ Tecnologias Utilizadas
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [Vite](https://vitejs.dev/) - Build tool e dev server
+- [React](https://reactjs.org/) - Biblioteca JavaScript para interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript com tipagem
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário
+- [shadcn/ui](https://ui.shadcn.com/) - Componentes de UI reutilizáveis
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Como Começar
 
-Follow these steps:
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Instale as dependências:
+```bash
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Inicie o servidor de desenvolvimento:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Acesse a aplicação em `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Scripts Disponíveis
 
-**Use GitHub Codespaces**
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a build de produção
+- `npm run preview` - Visualiza a build de produção localmente
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Deploy
 
-## What technologies are used for this project?
+O projeto está configurado para deploy automático. Você pode acessar a versão em produção em:
+[QuerVer](https://lovable.dev/projects/4238c5ff-00b7-4703-bfab-cc840eb20948)
 
-This project is built with:
+## 🤝 Contribuindo
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contribuições são sempre bem-vindas! Por favor, leia as diretrizes de contribuição antes de submeter pull requests.
 
-## How can I deploy this project?
+## 📄 Licença
 
-Simply open [Lovable](https://lovable.dev/projects/4238c5ff-00b7-4703-bfab-cc840eb20948) and click on Share -> Publish.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+<div align="center">
+Feito com 💜 por Jão
+</div>
